@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="App"
+>
+  <form
+    className="search-form"
+  >
+    <input
+      aria-label="Zoeken"
+      className="search-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyUp={[Function]}
+      placeholder="Zoeken"
+      type="search"
+      value=""
+    />
+    <div>
+      <button
+        aria-label="Reset"
+        className="button-clear"
+        onClick={[Function]}
+        type="reset"
+      />
+    </div>
+    <div>
+      <button
+        aria-label="Submit"
+        className="button-submit"
+        onClick={[Function]}
+        type="reset"
+      />
+    </div>
+  </form>
+</div>
+`;

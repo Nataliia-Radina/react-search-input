@@ -1,0 +1,144 @@
+html,
+body {
+  width:100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.App {
+  margin: 20px;
+}
+
+.search-form  {
+  position: relative;
+  width: 100%;
+  left: 0;
+  transition: all 200ms;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 100%;
+  height: 35px;
+  padding: 0 10px;
+  font-size: 0.875rem;
+  background-color: transparent;
+  border: 1px solid grey;
+  transition: all 200ms;
+  -webkit-appearance: none;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.search-form-active .search-input {
+  outline: none;
+  border: 1px solid grey;
+}
+
+.search-form button {
+  position: absolute;
+  height: 33px;
+  width: 35px;
+  margin: 1px;
+  cursor: pointer;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  text-align: center;
+  z-index: 0;
+}
+.search-form button:after {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.search-form-active button:hover {
+  background: #f0f0f0;
+}
+
+.button-submit {
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.button-submit:after {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  content: url('./search.svg');
+}
+
+.button-clear {
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
+  right: 35px;
+  height: 100%;
+  width: 35px;
+  background: transparent;
+}
+
+.search-form-active .button-clear {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.button-clear:after {
+  color: transparent;
+  content: 'X';
+  position: absolute;
+  font-size: 15px;
+  vertical-align: middle;
+  line-height: 1;
+  transition: color 200ms;
+}
+
+.search-form-active .button-clear:after {
+  color: grey;
+}
+
+@media only screen and (min-device-width : 768px) {
+  .search-input {
+    border: 1px solid lightgrey;
+  }
+  .search-form {
+    width: 250px;
+  }
+  .search-form.search-form-active {
+    width: 300px;
+  }
+}
+
+.search-suggestion {
+  width:100%;
+  height: 35px;
+  font-size: 0.875rem;
+  line-height: 35px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border: 1px solid lightgrey;
+  border-top: transparent;
+}
+
+.search-suggestion:hover {
+  cursor: pointer;
+  background: #f0f0f0;
+}
+
+.search-suggestion-text {
+  font-weight: bold;
+}
+
+.search-match {
+  font-weight: normal;
+}
